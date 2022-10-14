@@ -28,6 +28,65 @@
     text-decoration: none;
 }
 
-.test {
-    position: absolute;
-   }
+.dropdown {
+    position: -webkit-sticky;
+    position: fixed;
+    display: block;
+    top: 30%;
+}
+
+.wi-50 {
+    width: 50%;
+}
+
+.wi-75 {
+    width: 75%;
+}
+
+.wi-25 {
+    width: 25%;
+}
+
+.dropdown-item {
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 1658px) {
+
+.sidebar {
+    font-size: 12px;
+    padding: 0px;
+    width: 12%;
+}
+
+}
+
+@media only screen and (max-width: 1270px) {
+    .navFull {
+        display: none;
+    }
+
+    .navDrop {
+        display: block;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .smallImg {
+        width: 70vw;
+    }
+
+    .singleLine {
+        width: 100vw;
+    }
+  }
+
+  @media only screen and (min-width: 1271px) {
+    .navFull {
+        display: block;
+    }
+
+    .navDrop {
+        display: none;
+    }
+  }

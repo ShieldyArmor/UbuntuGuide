@@ -20,18 +20,38 @@
 </head>
 <body>
     
-<div class="sidebar">
-    <p class="mb-2"><b>Kapittler:</b></p>
+<div class="sidebar navFull">
+    <p class="mb-2 col-10"><b>Kapittler:</b></p>
     <ol>
-        <li class="col-10 mx-auto"><a href="#VM">Hvordan man setter opp et VM</a></li>
-        <li class="col-10 mx-auto"><a href="#installation">Installasjon av Ubuntu web server</a></li>
-        <li class="col-10 mx-auto"><a href="#apache">Installering av Apache2 ved bruk av PowerShell</a></l>
-        <li class="col-10 mx-auto"><a href="#FTP">File transer ved bruk av FileZilla</a></li>
-        <li class="col-10 mx-auto"><a href="#config">Configurasjon av nettsiden</a></li>
+        <li class="col-10 col-md-9 mx-auto"><a href="#VM">Hvordan man setter opp et VM</a></li>
+        <li class="col-10 col-md-9 mx-auto"><a href="#installation">Installasjon av Ubuntu web server</a></li>
+        <li class="col-10 col-md-9 mx-auto"><a href="#apache">Installering av Apache2 ved bruk av PowerShell</a></l>
+        <li class="col-10 col-md-9 mx-auto"><a href="#FTP">File transer ved bruk av FileZilla</a></li>
+        <li class="col-10 col-md-9 mx-auto"><a href="#config">Configurasjon av nettsiden</a></li>
       </ol>
     <p class="text-end me-3"><a href="#top">Tilbake til toppen <i class="fa-solid fa-house"></i></a></p>
 </div>
 
+<div class="dropdown navDrop dropend">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    K<br>
+    A<br> 
+    P<br> 
+    I<br>
+    T<br>
+    T<br>
+    L<br>
+    E<br>
+    R<br>
+  </button>
+  <ol class="dropdown-menu">
+        <li class="dropdown-item col-10 col-md-9 mx-auto"><a href="#VM">Hvordan man setter opp et VM</a></li>
+        <li class="dropdown-item col-10 col-md-9 mx-auto"><a href="#installation">Installasjon av Ubuntu web server</a></li>
+        <li class="dropdown-item col-10 col-md-9 mx-auto"><a href="#apache">Installering av Apache2 ved bruk av PowerShell</a></li>
+        <li class="dropdown-item col-10 col-md-9 mx-auto"><a href="#FTP">File transfer ved bruk av FileZilla</a></li>
+        <li class="dropdown-item col-10 col-md-9 mx-auto"><a href="#config">Configurasjon av nettsiden</a></li>
+  </ol>
+</div>
 
 <div class="container pb-5">
   <h1 id="top" class="text-center mt-5">Hvordan setter man opp Ubuntu Web server og Apache2</h1>
@@ -40,10 +60,9 @@
 </div>
 
 <div class="container">
-  <h1 id="VM" class="col-10 mx-auto">Hvordan man setter opp et VM</h1>
-  <p class="col-10 mx-auto">Først og fremst, logger mann inn på VMWare/VSphere. Der skal du bla gjennom mappene og finne din “Elev-pool” mappe. Din mappe er i et annen mappe med klassens navn og er markert med et tall som Læreren har gitt deg</p>
-
-  <p class="col-10 mx-auto">Eksempel: vcenter01.ikt-fag.no > ds01 > 2ITB > Elev-Pool #26</p>
+  <h1 id="VM" class="col-10 col-md-9 mx-auto">Hvordan man setter opp et VM</h1>
+  <p class="col-10 col-md-9 mx-auto">Først og fremst, logger mann inn på VMWare/VSphere. Der skal du bla gjennom mappene og finne din “Elev-pool” mappe. Din mappe er i et annen mappe med klassens navn og er markert med et tall som Læreren har gitt deg</p>
+  <p class="col-10 col-md-9 mx-auto">Eksempel: vcenter01.ikt-fag.no > ds01 > 2ITB > Elev-Pool #26</p>
 </div>
 
 <div class="container text-center">
@@ -51,302 +70,302 @@
 </div>
 
 <div class="container">
-  <p class="col-10 mx-auto">Høyreklikk på mappen din og klikk “New Virtual Machine…”</p>
+  <p class="col-10 col-md-9 mx-auto">Høyreklikk på mappen din og klikk “New Virtual Machine…”</p>
 
-  <p class="col-10 mx-auto">På stegene 1-5 av pop-uppen du får skal du velge:</p>
+  <p class="col-10 col-md-9 mx-auto">På stegene 1-5 av pop-uppen du får skal du velge:</p>
 
   <ol>
-    <li class="col-10 mx-auto">“Create a new virtual machine”</li>
-    <li class="col-10 mx-auto">Gi serveren din et navn og gå videre</li>
-    <li class="col-10 mx-auto">Gå videre / Vær sikker at du har valgt din Elev-Pool mappe</l>
-    <li class="col-10 mx-auto">Velg “IKT-fag” disken</li>
-    <li class="col-10 mx-auto">Gå videre uten å endre på noe.</li>
+    <li class="col-10 col-md-9 mx-auto">“Create a new virtual machine”</li>
+    <li class="col-10 col-md-9 mx-auto">Gi serveren din et navn og gå videre</li>
+    <li class="col-10 col-md-9 mx-auto">Gå videre / Vær sikker at du har valgt din Elev-Pool mappe</l>
+    <li class="col-10 col-md-9 mx-auto">Velg “IKT-fag” disken</li>
+    <li class="col-10 col-md-9 mx-auto">Gå videre uten å endre på noe.</li>
   </ol>
 
-  <p class="col-10 mx-auto">På steg 6 skal man velge Linux familien og under finne “Ubuntu Linux (64-bit)”</p>
+  <p class="col-10 col-md-9 mx-auto">På steg 6 skal man velge Linux familien og under finne “Ubuntu Linux (64-bit)”</p>
 </div>
 
 <div class="container">
 
   <ul>
-    <li class="col-10 mx-auto"><b>New hard disk</b> > Disk provisioning > Thin provisioning</li>
-    <li class="col-10 mx-auto"><b>New network</b> > browse… > Elev-LAB-(Elev nummer)</li>
-    <li class="col-10 mx-auto"><b>New CD/DVD Drive</b> > Content Library ISO File > Ubuntu-20.04.3-live-server-amd64</li>
-    <li class="col-10 mx-auto"><b>New CD/DVD Drive</b> > Connect at power on</li>
+    <li class="col-10 col-md-9 mx-auto"><b>New hard disk</b> > Disk provisioning > Thin provisioning</li>
+    <li class="col-10 col-md-9 mx-auto"><b>New network</b> > browse… > Elev-LAB-(Elev nummer)</li>
+    <li class="col-10 col-md-9 mx-auto"><b>New CD/DVD Drive</b> > Content Library ISO File > Ubuntu-20.04.3-live-server-amd64</li>
+    <li class="col-10 col-md-9 mx-auto"><b>New CD/DVD Drive</b> > Connect at power on</li>
   </ul>
 
 </div>
 
 <div class="container text-center">
-    <img class="mt-2 mb-2 w-50" src="images/2.png" alt="">
+    <img class="mt-2 mb-2 wi-50 smallImg" src="images/2.png" alt="">
   </div>
 
 <div class="container">
-  <p class="col-10 mx-auto">På toppen av vinduet man kan se et fane som heter “VM Options”</p>
+  <p class="col-10 col-md-9 mx-auto">På toppen av vinduet man kan se et fane som heter “VM Options”</p>
 
-  <p class="col-10 mx-auto"><b>Boot options</b> > trykk på “Force BIOS Setup”</p>
+  <p class="col-10 col-md-9 mx-auto"><b>Boot options</b> > trykk på “Force BIOS Setup”</p>
   
-  <p class="col-10 mx-auto">Finn VM-en I mappen du spesifisert før og dobbeltklikk å åpne server panel.</p>
+  <p class="col-10 col-md-9 mx-auto">Finn VM-en I mappen du spesifisert før og dobbeltklikk å åpne server panel.</p>
 </div>
 
 <div class="container">
-  <p class="col-10 mx-auto">Ved toppen, der navnet på serveren er, klikk den grønne knappen å starte opp maskinen. Og etter det, finner vi “Launch web console” under lite vinduet som viser hva skjer på maskinen.</p>
+  <p class="col-10 col-md-9 mx-auto">Ved toppen, der navnet på serveren er, klikk den grønne knappen å starte opp maskinen. Og etter det, finner vi “Launch web console” under lite vinduet som viser hva skjer på maskinen.</p>
   <br>
-  <p class="col-10 mx-auto">Bruk piltaster å navigere til “Boot” fanen og ned til “Network boot from VMware VMXNET3”, klikk enter på den en gang og navigere videre til “Exit”, der vi trykker på “save changes”, enter på “yes” og til slutt trykker F10 og enter igjen.</p>
+  <p class="col-10 col-md-9 mx-auto">Bruk piltaster å navigere til “Boot” fanen og ned til “Network boot from VMware VMXNET3”, klikk enter på den en gang og navigere videre til “Exit”, der vi trykker på “save changes”, enter på “yes” og til slutt trykker F10 og enter igjen.</p>
 </div>
 
 <div class="container mb-3">
-<h1 id="installation" class="col-10 mx-auto">Installasjon av Ubuntu web server</h1>
-<p class="col-10 mx-auto fw-bold">Nå som VM-en har lastet opp, gjør følgende:</p>
+<h1 id="installation" class="col-10 col-md-9 mx-auto">Installasjon av Ubuntu web server</h1>
+<p class="col-10 col-md-9 mx-auto fw-bold">Nå som VM-en har lastet opp, gjør følgende:</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/3.png" alt="">
-    <p class="col-10 mx-auto">Velg et språk, vi anbefaler engelsk for å navigere konsollen enklere.</p>
+    <img class="wi-75 smallImg" src="images/3.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Velg et språk, vi anbefaler engelsk for å navigere konsollen enklere.</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/4.png" alt="">
-    <p class="col-10 mx-auto">Bruk piltastene for å navigere gjennom Layout options og velg et tastatur språk. Når du er ferdig, trykk på done.</p>
+    <img class="wi-75 smallImg" src="images/4.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Bruk piltastene for å navigere gjennom Layout options og velg et tastatur språk. Når du er ferdig, trykk på done.</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/5.png" alt="">
-    <p class="col-10 mx-auto">Trykk på ens160 eth  > Edit IPv4 > IPv4 Method: manual</p>
+    <img class="wi-75 smallImg" src="images/5.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Trykk på ens160 eth  > Edit IPv4 > IPv4 Method: manual</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-50" src="images/6.png" alt="">
-    <p class="col-10 mx-auto">Skriv inn informasjonen som du har fått enten fra læreren eller noen andre</p>
-    <img class="w-50" src="images/7.png" alt="">
-    <img class="w-50" src="images/8.png" alt="">
-    <p class="col-10 mx-auto">Skriv inn noe slikt, og la search domains stå tomm og trykk på “save”</p>
+    <img class="wi-50 smallImg" src="images/6.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Skriv inn informasjonen som du har fått enten fra læreren eller noen andre</p>
+    <img class="wi-50 smallImg" src="images/7.png" alt="">
+    <img class="wi-50 smallImg" src="images/8.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Skriv inn noe slikt, og la search domains stå tomm og trykk på “save”</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/9.png" alt="">
-    <p class="col-10 mx-auto">La dette være, vi trenger ikke å gjøre noe her, trykk på “done”</p>
+    <img class="wi-75 smallImg" src="images/9.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">La dette være, vi trenger ikke å gjøre noe her, trykk på “done”</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/10.png" alt="">
-    <p class="col-10 mx-auto">La dette stå som det er og trykk på “done”</p>
+    <img class="wi-75 smallImg" src="images/10.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">La dette stå som det er og trykk på “done”</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/11.png" alt="">
-    <p class="col-10 mx-auto">Trykk på “Update to the new installer”</p>
+    <img class="wi-75 smallImg" src="images/11.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Trykk på “Update to the new installer”</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/12.png" alt="">
-    <p class="col-10 mx-auto">Fortsett her med å trykke på “done”</p>
+    <img class="wi-75 smallImg" src="images/12.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Fortsett her med å trykke på “done”</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-50" src="images/14.png" alt="">
-    <p class="col-10 mx-auto">Trykk på “continue”</p>
+    <img class="wi-50 smallImg" src="images/14.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Trykk på “continue”</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/15.png" alt="">
-    <p class="col-10 mx-auto">Skriv inn din egen informasjon, og husk dette til senere</p>
+    <img class="wi-75 smallImg" src="images/15.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Skriv inn din egen informasjon, og husk dette til senere</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/16.png" alt="">
-    <p class="col-10 mx-auto">Trykk på “Install OpenSSH server”, la Import SSH identity stå på “no” og trykk på done</p>
+    <img class="wi-75 smallImg" src="images/16.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Trykk på “Install OpenSSH server”, la Import SSH identity stå på “no” og trykk på done</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/17.png" alt="">
-    <p class="col-10 mx-auto">Hvis du vil så kan du installere ekstra pakker her, men det er ikke nødvending, så vi fortsetter ved å trykke på “done”.</p>
+    <img class="wi-75 smallImg smallImg" src="images/17.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Hvis du vil så kan du installere ekstra pakker her, men det er ikke nødvending, så vi fortsetter ved å trykke på “done”.</p>
     <br>
     <p>Når den er ferdig installert, så trykker du på “reboot now”</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-50" src="images/18.png" alt="">
-    <p class="col-10 mx-auto">Hvis du får dette, så trykker bare på enter også fortsetter prosessen</p>
+    <img class="wi-50 smallImg" src="images/18.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Hvis du får dette, så trykker bare på enter også fortsetter prosessen</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/19.png" alt="">
-    <p class="col-10 mx-auto">Hvis den står stille her, så trykker du bare på “ENTER” på tastaturet</p>
+    <img class="wi-75 smallImg" src="images/19.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Hvis den står stille her, så trykker du bare på “ENTER” på tastaturet</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-25" src="images/20.png" alt="">
-    <p class="col-10 mx-auto">Nederst på konsollen så skriver du inn brukernavnet ditt som du skrev istad</p>
+    <img class="wi-25 smallImg" src="images/20.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Nederst på konsollen så skriver du inn brukernavnet ditt som du skrev istad</p>
 </div>
 
 <div class="container text-center mb-5">
-    <img class="w-25" src="images/21.png" alt="">
-    <p class="col-10 mx-auto">Også skriver du passordet (PS: konsollen kommer ikke til å vise passordet ditt når du skriver det)</p>
+    <img class="wi-25 smallImg" src="images/21.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Også skriver du passordet (PS: konsollen kommer ikke til å vise passordet ditt når du skriver det)</p>
     <br>
     <p>Nå som serveren er i stand, kan vi bruke powershell eller command line for å åpne den på vår egen maskin.</p>
 </div>
 
 <div class="container mt-5 mb-3">
-  <h1 id="apache" class="col-10 mx-auto">Installering av Apache2 ved bruk av PowerShell</h1>
-  <p class="col-10 mx-auto">Skriv inn følgende på powershell eller command line</p>
+  <h1 id="apache" class="col-10 col-md-9 mx-auto">Installering av Apache2 ved bruk av PowerShell</h1>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende på powershell eller command line</p>
   <p class="col-9 mx-auto code">ssh (brukernavn)@(IP-adresse)</p>
   <div class="text-center">
-    <img class="w-50" src="images/22.png" alt="">
+    <img class="wi-50 smallImg" src="images/22.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Hvis du får dette så skriver du “yes” og trykker på “enter”.</p>
+  <p class="col-10 col-md-9 mx-auto">Hvis du får dette så skriver du “yes” og trykker på “enter”.</p>
   <div class="text-center">
-    <img class="w-50" src="images/23.png" alt="">
+    <img class="wi-50 smallImg" src="images/23.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv in passordet ditt (PS: konsollen kommer ikke til å vise passordet ditt når du skriver det)</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv in passordet ditt (PS: konsollen kommer ikke til å vise passordet ditt når du skriver det)</p>
   <div class="text-center">
-    <img class="w-50" src="images/24.png" alt="">
+    <img class="wi-50 smallImg" src="images/24.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv inn følgende, for å oppdatere system repository index</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende, for å oppdatere system repository index</p>
   <p class="col-9 mx-auto code">sudo apt update</p>
   <div class="text-center">
-    <img class="w-50" src="images/25.png" alt="">
+    <img class="wi-50 smallImg" src="images/25.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Installer apache2 ved bruk av følgende:</p>
+  <p class="col-10 col-md-9 mx-auto">Installer apache2 ved bruk av følgende:</p>
   <p class="col-9 mx-auto code">sudo apt install apache2</p>
   <div class="text-center">
-    <img class="w-50" src="images/26.png" alt="">
+    <img class="wi-50 smallImg" src="images/26.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv “y” og trykk på “enter”</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv “y” og trykk på “enter”</p>
   <div class="text-center">
-    <img class="w-50" src="images/27.png" alt="">
+    <img class="wi-50 smallImg" src="images/27.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Sjekk apache2 versjon, hvis det står noe lignende som dette, så er apache2 installert.</p>
+  <p class="col-10 col-md-9 mx-auto">Sjekk apache2 versjon, hvis det står noe lignende som dette, så er apache2 installert.</p>
   <p class="col-9 mx-auto code">apache2 -version</p>
   <div class="text-center">
-    <img class="w-50" src="images/28.png" alt="">
+    <img class="wi-50" src="images/28.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">kriv inn lignende for å sjekke hvilken applikasjoner har tilgang til firewall (brannmur :) )</p>
+  <p class="col-10 col-md-9 mx-auto">kriv inn lignende for å sjekke hvilken applikasjoner har tilgang til firewall (brannmur :) )</p>
   <p class="col-9 mx-auto code">sudo ufw app list</p>
   <div class="text-center">
-    <img class="w-50" src="images/29.png" alt="">
+    <img class="wi-50" src="images/29.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Vi gir apache tilgang til nettverk</p>
+  <p class="col-10 col-md-9 mx-auto">Vi gir apache tilgang til nettverk</p>
   <p class="col-9 mx-auto code">sudo ufw allow apache</p>
   <div class="text-center">
-    <img class="w-50" src="images/30.png" alt="">
+    <img class="wi-50" src="images/30.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Vi sjekker om apache har tilgang til firewall (brannmuren :) )</p>
+  <p class="col-10 col-md-9 mx-auto">Vi sjekker om apache har tilgang til firewall (brannmuren :) )</p>
   <p class="col-9 mx-auto code">sudo ufw status</p>
   <div class="text-center">
-    <img class="w-50" src="images/31.png" alt="">
+    <img class="wi-50" src="images/31.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv inn følgende for å sjekke om Apache HTTP Server er koblet til</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende for å sjekke om Apache HTTP Server er koblet til</p>
   <p class="col-9 mx-auto code">sudo systemctl status apache2</p>
   <div class="text-center">
-    <img class="w-50" src="images/32.png" alt="">
+    <img class="wi-50 smallImg" src="images/32.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">For å sjekke om serveren fungerer, skriv inn følgende, du kan også ta den IP-en du får her og skrive det inn i nettleseren for å besøke nettsiden.</p>
+  <p class="col-10 col-md-9 mx-auto">For å sjekke om serveren fungerer, skriv inn følgende, du kan også ta den IP-en du får her og skrive det inn i nettleseren for å besøke nettsiden.</p>
   <p class="col-9 mx-auto code">hostname -I</p>
   <div class="text-center">
-    <img class="w-50" src="images/33.png" alt="">
+    <img class="wi-50" src="images/33.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv inn følgende for å lage denne mappestrukturen</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende for å lage denne mappestrukturen</p>
   <p class="col-9 mx-auto code">sudo mkdir -p /var/www/info.net/html</p>
   <div class="text-center">
-    <img class="w-50" src="images/34.png" alt="">
+    <img class="wi-50 smallImg" src="images/34.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Vi endrer mappe tilgang til brukeren</p>
+  <p class="col-10 col-md-9 mx-auto">Vi endrer mappe tilgang til brukeren</p>
   <p class="col-9 mx-auto code">sudo chown -R $USER:$USER /var/www/info.net/html<br>sudo chmod -R 755 /var/www/info.net</p>
   <div class="text-center">
-    <img class="w-50 mb-1" src="images/35.png" alt="">
-    <img class="w-50" src="images/36.png" alt="">
+    <img class="wi-50 smallImg mb-1" src="images/35.png" alt="">
+    <img class="wi-50 smallImg" src="images/36.png" alt="">
   </div>
 </div>
 
 <div class="container mt-5 mb-3">
-  <h1 id="FTP" class="col-10 mx-auto">File transer ved bruk av FileZilla</h1>
-  <p class="col-10 mx-auto">Vi installerer Filezilla slik at vi kan laste opp nettsiden vår på serveren.</p>
+  <h1 id="FTP" class="col-10 col-md-9 mx-auto">File transer ved bruk av FileZilla</h1>
+  <p class="col-10 col-md-9 mx-auto">Vi installerer Filezilla slik at vi kan laste opp nettsiden vår på serveren.</p>
   <p class="col-9 mx-auto"><a href="https://filezilla-project.org">https://filezilla-project.org</a></p>
 </div>
   
 
 <div class="container text-center mb-3">
-    <img class="w-25" src="images/37.png" alt="">
-    <p class="col-10 mx-auto">Trykk på Filezilla Client</p>
+    <img class="wi-25" src="images/37.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Trykk på Filezilla Client</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-50" src="images/38.png" alt="">
-    <p class="col-10 mx-auto">Trykk på den helt til venstre</p>
+    <img class="wi-50" src="images/38.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Trykk på den helt til venstre</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-50" src="images/39.png" alt="">
-    <p class="col-10 mx-auto">Skriv inn server innloggingsinformasjon her og sett port til 22</p>
-    <img class="w-50" src="images/40.png" alt="">
-    <p class="col-10 mx-auto">eksempel:</p>
+    <img class="wi-50" src="images/39.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Skriv inn server innloggingsinformasjon her og sett port til 22</p>
+    <img class="wi-50" src="images/40.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">eksempel:</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-50" src="images/41.png" alt="">
-    <p class="col-10 mx-auto">Trykk på “ok” </p>
+    <img class="wi-50" src="images/41.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Trykk på “ok” </p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-75" src="images/42.png" alt="">
-    <p class="col-10 mx-auto">På høyre felt, naviger til root mappe (“/”)</p>
+    <img class="wi-75 smallImg" src="images/42.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">På høyre felt, naviger til root mappe (“/”)</p>
 </div>
 
 <div class="container text-center mb-3">
-    <img class="w-50" src="images/43.png" alt="">
-    <p class="col-10 mx-auto">Naviger til /var/www/info.net/html, her kan du legge inn nettside filene dine</p>
+    <img class="wi-50" src="images/43.png" alt="">
+    <p class="col-10 col-md-9 mx-auto">Naviger til /var/www/info.net/html, her kan du legge inn nettside filene dine</p>
 </div>
 
 <div class="container mt-5 mb-3">
-  <h1 id="config" class="col-10 mx-auto">Configurasjon av nettsiden</h1>
-  <p class="col-10 mx-auto">Vi Går tilbake til powershell eller command line (går ann på hva du bruker) og skriv in følgende. Her skal vi lage en config file.</p>
+  <h1 id="config" class="col-10 col-md-9 mx-auto">Configurasjon av nettsiden</h1>
+  <p class="col-10 col-md-9 mx-auto">Vi Går tilbake til powershell eller command line (går ann på hva du bruker) og skriv in følgende. Her skal vi lage en config file.</p>
   <div class="text-center">
-    <img class="w-50" src="images/44.png" alt="">
+    <img class="wi-50 smallImg" src="images/44.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Kopier dette og legg det til feltet (høyreklikk)</p>
+  <p class="col-10 col-md-9 mx-auto">Kopier dette og legg det til feltet (høyreklikk)</p>
   <p class="col-9 mx-auto code">
     &lt;VirtualHost *:80><br>
     ServerAdmin admin@info.net<br>
@@ -357,65 +376,65 @@
     CustomLog ${APACHE_LOG_DIR}/access.log combined<br>
     &lt;VirtualHost> 
   </p>
-  <p class="col-10 mx-auto">For å lagre filen, trykk på CTRL+O, trykk på “enter” og trykk på CTRL+X til slutt for å gå tilbake til konsollen.</p>
+  <p class="col-10 col-md-9 mx-auto">For å lagre filen, trykk på CTRL+O, trykk på “enter” og trykk på CTRL+X til slutt for å gå tilbake til konsollen.</p>
   <div class="text-center">
-    <img class="w-50" src="images/45.png" alt="">
+    <img class="wi-50" src="images/45.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv inn følgende, dette laster inn config file for “info.net”.</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende, dette laster inn config file for “info.net”.</p>
   <p class="col-9 mx-auto code">sudo a2ensite info.net.conf</p>
   <div class="text-center">
-    <img class="w-50" src="images/46.png" alt="">
+    <img class="wi-50" src="images/46.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Vi bruker vår egen config fil nå, så skriv inn dette for at serveren skal forstå at vi ikke bruker default config file lenger.</p>
+  <p class="col-10 col-md-9 mx-auto">Vi bruker vår egen config fil nå, så skriv inn dette for at serveren skal forstå at vi ikke bruker default config file lenger.</p>
   <p class="col-9 mx-auto code">sudo a2disssite 000-default.conf</p>
   <div class="text-center">
-    <img class="w-50" src="images/47.png" alt="">
+    <img class="wi-50" src="images/47.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv inn følgende, for å åpne servername config file</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende, for å åpne servername config file</p>
   <p class="col-9 mx-auto code">sudo nano /etc/apache2/conf-available/servername.conf</p>
   <div class="text-center">
-    <img class="w-50" src="images/48.png" alt="">
+    <img class="wi-50 smallImg" src="images/48.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv inn følgende for å gi serveren et navn<br><br>Husk å lagre filen ved å trykke på  CTRL+O, CTRL+X</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende for å gi serveren et navn<br><br>Husk å lagre filen ved å trykke på  CTRL+O, CTRL+X</p>
   <p class="col-9 mx-auto code">ServerName info.net</p>
   <div class="text-center">
-    <img class="w-50" src="images/49.png" alt="">
+    <img class="wi-50" src="images/49.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Dette lar us bruke det nye server navnet</p>
+  <p class="col-10 col-md-9 mx-auto">Dette lar us bruke det nye server navnet</p>
   <p class="col-9 mx-auto code">sudo a2enconf servername</p>
   <div class="text-center">
-    <img class="w-50" src="images/50.png" alt="">
+    <img class="wi-50" src="images/50.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Skriv inn følgende for å sjekke om alt fungerer</p>
+  <p class="col-10 col-md-9 mx-auto">Skriv inn følgende for å sjekke om alt fungerer</p>
   <p class="col-9 mx-auto code">sudo apache2ctl configtest</p>
   <div class="text-center">
-    <img class="w-50" src="images/51.png" alt="">
+    <img class="wi-50" src="images/51.png" alt="">
   </div>
 </div>
 
 <div class="container mb-3">
-  <p class="col-10 mx-auto">Og til slutt, reload serveren.</p>
+  <p class="col-10 col-md-9 mx-auto">Og til slutt, reload serveren.</p>
   <p class="col-9 mx-auto code">systemctl reload apache2</p>
   <div class="text-center">
-    <img class="w-50" src="images/52.png" alt="">
+    <img class="wi-50" src="images/52.png" alt="">
   </div>
 </div>
 
